@@ -1,0 +1,26 @@
+# what did we write the thing in?
+language: java
+jdk:
+  - oraclejdk9
+
+# monitor these branches for pr/merge
+branches:
+  only:
+    - master
+
+# keep gradle cache/wrapper intact after each build
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+# tell me when it all goes to hell... or not
+notifications:
+  slack: 
+    rooms:
+      bruhritto:rwPNGKj7k0mNAjMb37U7MJVp#datarithmsbdd
+    on_success: always
+    on_failure: always
