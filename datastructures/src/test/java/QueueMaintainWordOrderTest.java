@@ -4,7 +4,7 @@ import org.jbehave.core.steps.InjectableStepsFactory;
 
 public class QueueMaintainWordOrderTest extends JUnitStory {
 
-    private StoryBuilder builder = new StoryBuilder<QueueMaintainWordOrderSteps>();
+    private StoryBuilder builder = new StoryBuilder();
 
     @Override
     public Configuration configuration() {

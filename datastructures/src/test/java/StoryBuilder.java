@@ -6,7 +6,7 @@ import org.jbehave.core.reporters.StoryReporterBuilder;
 import org.jbehave.core.steps.InjectableStepsFactory;
 import org.jbehave.core.steps.InstanceStepsFactory;
 
-public class StoryBuilder<TSteps> {
+public class StoryBuilder {
 
     protected Configuration BuildConfiguration(Class c) {
         return new MostUsefulConfiguration()
@@ -20,7 +20,7 @@ public class StoryBuilder<TSteps> {
                 );
     }
 
-    protected InjectableStepsFactory BuildStepsFactory(Configuration c, TSteps steps) {
+    protected InjectableStepsFactory BuildStepsFactory(Configuration c, Object steps) {
         return new InstanceStepsFactory(c, steps);
     }
 }
