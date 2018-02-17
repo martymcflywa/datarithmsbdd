@@ -2,7 +2,7 @@ import org.jbehave.core.configuration.Configuration;
 import org.jbehave.core.junit.JUnitStory;
 import org.jbehave.core.steps.InjectableStepsFactory;
 
-public class StackReverseWordTest extends JUnitStory {
+public class QueueMaintainWordOrderTest extends JUnitStory {
 
     private StoryBuilder builder = new StoryBuilder();
 
@@ -13,7 +13,6 @@ public class StackReverseWordTest extends JUnitStory {
 
     @Override
     public InjectableStepsFactory stepsFactory() {
-        return builder.BuildStepsFactory(configuration(), new StackReverseWordSteps());
-
+        return builder.BuildStepsFactory(configuration(), new QueueMaintainWordOrderSteps());
     }
 }
